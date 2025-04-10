@@ -17,10 +17,7 @@ reservations = APIRouter()
 @reservations.get("/", response_model=List[ReservationRead])
 @inject
 def get_reservations(service: Annotated[ReservationService, Depends(Provide[Container.reservation_service])]):
-    try:
-        return service.get_all()
-    except NotFoundException:
-        raise HTTPException(status_code=404, detail="There are no reservations in the Reservation model!")
+    return service.get_all()
 
 
 @reservations.post("/", response_model=ReservationRead)
