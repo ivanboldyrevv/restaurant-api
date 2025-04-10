@@ -1,0 +1,21 @@
+# environments
+.venv
+venv/
+
+# python
+__pycache__/
+
+#mypy
+*/mypy_cache
+.mypy_cache
+
+#pytest
+*.pytest_cache
+.__pycache__
+.pytest_cache
+
+# IDE
+.vscode/*
+!.vscode/extensions.json
+.idea
+.vscode
