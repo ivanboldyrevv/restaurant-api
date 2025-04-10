@@ -9,7 +9,6 @@ cd <project path>
 ```
 ```bash
 docker compose up -d
-docker exec restaurant_backend alembic revision --autogenerate -m "initial"
 docker exec restaurant_backend alembic upgrade head
 ```
 Then open your browser and open `http://localhost:5555/docs` for running docs.
